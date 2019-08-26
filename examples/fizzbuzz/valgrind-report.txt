@@ -1,0 +1,887 @@
+docker run -it -v /Users/alvaro/Documents/project/darkmatter/valgrind/examples/fizzbuzz:/app valgrind valgrind --leak-check=yes ./tests.ex
+==1== Memcheck, a memory error detector
+==1== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==1== Command: ./tests.ex
+==1== 
+==1== Invalid write of size 1
+==1==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40586D: FizzBuzz (in /app/tests.ex)
+==1==    by 0x405935: Test_Multiples_of_3_are_translated_to_Fizz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523bd24 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x405935: Test_Multiples_of_3_are_translated_to_Fizz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid read of size 1
+==1==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401BE7: CuAssertStrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x40595D: Test_Multiples_of_3_are_translated_to_Fizz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523bd24 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x405935: Test_Multiples_of_3_are_translated_to_Fizz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid write of size 1
+==1==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40586D: FizzBuzz (in /app/tests.ex)
+==1==    by 0x405995: Test_any_multiple_of_3_are_translated_to_Fizz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523bd74 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x405995: Test_any_multiple_of_3_are_translated_to_Fizz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid read of size 1
+==1==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401BE7: CuAssertStrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x4059BD: Test_any_multiple_of_3_are_translated_to_Fizz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523bd74 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x405995: Test_any_multiple_of_3_are_translated_to_Fizz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid write of size 1
+==1==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405830: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4059F5: Test_Multiples_of_5_are_translated_to_Buzz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523bdc4 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4059F5: Test_Multiples_of_5_are_translated_to_Buzz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid read of size 1
+==1==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401BE7: CuAssertStrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x405A1D: Test_Multiples_of_5_are_translated_to_Buzz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523bdc4 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4059F5: Test_Multiples_of_5_are_translated_to_Buzz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid write of size 1
+==1==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405830: FizzBuzz (in /app/tests.ex)
+==1==    by 0x405A55: Test_any_multiple_of_5_are_translated_to_Buzz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523be14 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x405A55: Test_any_multiple_of_5_are_translated_to_Buzz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid read of size 1
+==1==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401BE7: CuAssertStrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x405A7D: Test_any_multiple_of_5_are_translated_to_Buzz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523be14 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x405A55: Test_any_multiple_of_5_are_translated_to_Buzz (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid write of size 1
+==1==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40586D: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4058E6: FizzBuzzRange (in /app/tests.ex)
+==1==    by 0x405BF0: Test_return_all_fizzBuzz_translations_from_1_to_3 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523c054 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4058E6: FizzBuzzRange (in /app/tests.ex)
+==1==    by 0x405BF0: Test_return_all_fizzBuzz_translations_from_1_to_3 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid read of size 1
+==1==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401BE7: CuAssertStrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x405C3A: Test_return_all_fizzBuzz_translations_from_1_to_3 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523c054 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4058E6: FizzBuzzRange (in /app/tests.ex)
+==1==    by 0x405BF0: Test_return_all_fizzBuzz_translations_from_1_to_3 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid write of size 1
+==1==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405830: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4058E6: FizzBuzzRange (in /app/tests.ex)
+==1==    by 0x405CD0: Test_return_all_fizzBuzz_translations_from_4_6 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523c154 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4058E6: FizzBuzzRange (in /app/tests.ex)
+==1==    by 0x405CD0: Test_return_all_fizzBuzz_translations_from_4_6 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid write of size 1
+==1==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40586D: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4058E6: FizzBuzzRange (in /app/tests.ex)
+==1==    by 0x405CD0: Test_return_all_fizzBuzz_translations_from_4_6 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523c1a4 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4058E6: FizzBuzzRange (in /app/tests.ex)
+==1==    by 0x405CD0: Test_return_all_fizzBuzz_translations_from_4_6 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== Invalid read of size 1
+==1==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401BE7: CuAssertStrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x405D1A: Test_return_all_fizzBuzz_translations_from_4_6 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1==  Address 0x523c154 is 0 bytes after a block of size 4 alloc'd
+==1==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x405800: FizzBuzz (in /app/tests.ex)
+==1==    by 0x4058E6: FizzBuzzRange (in /app/tests.ex)
+==1==    by 0x405CD0: Test_return_all_fizzBuzz_translations_from_4_6 (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+...........................................
+
+OK (43 tests)
+
+==1== 
+==1== HEAP SUMMARY:
+==1==     in use at exit: 35,472 bytes in 92 blocks
+==1==   total heap usage: 200 allocs, 108 frees, 49,014 bytes allocated
+==1== 
+==1== 7 bytes in 1 blocks are definitely lost in loss record 2 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x402BCB: TestCuTestInit (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 7 bytes in 1 blocks are definitely lost in loss record 3 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x402D3B: TestCuAssert (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 7 bytes in 1 blocks are definitely lost in loss record 4 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x4030FB: TestCuAssertPtrEquals_Success (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 7 bytes in 1 blocks are definitely lost in loss record 5 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x4031D6: TestCuAssertPtrEquals_Failure (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 7 bytes in 1 blocks are definitely lost in loss record 6 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x4032BB: TestCuAssertPtrNotNull_Success (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 7 bytes in 1 blocks are definitely lost in loss record 7 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x40339B: TestCuAssertPtrNotNull_Failure (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 7 bytes in 1 blocks are definitely lost in loss record 8 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x40344B: TestCuTestRun (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 7 bytes in 1 blocks are definitely lost in loss record 9 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x40365D: TestCuSuiteAddTest (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 10 bytes in 1 blocks are definitely lost in loss record 11 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x40394D: TestCuSuiteRun (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 10 bytes in 1 blocks are definitely lost in loss record 12 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x40396D: TestCuSuiteRun (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 10 bytes in 1 blocks are definitely lost in loss record 13 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x403ADD: TestCuSuiteSummary (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 10 bytes in 1 blocks are definitely lost in loss record 14 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x403C2D: TestCuSuiteDetails_SingleFail (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 11 bytes in 1 blocks are definitely lost in loss record 19 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x40390D: TestCuSuiteRun (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 11 bytes in 1 blocks are definitely lost in loss record 20 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x40392D: TestCuSuiteRun (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 11 bytes in 1 blocks are definitely lost in loss record 21 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x403ABD: TestCuSuiteSummary (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 11 bytes in 1 blocks are definitely lost in loss record 22 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x403C0D: TestCuSuiteDetails_SingleFail (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 11 bytes in 1 blocks are definitely lost in loss record 23 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x403E7D: TestCuSuiteDetails_SinglePass (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 11 bytes in 1 blocks are definitely lost in loss record 24 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x403FAD: TestCuSuiteDetails_MultiplePasses (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 11 bytes in 1 blocks are definitely lost in loss record 25 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x403FCD: TestCuSuiteDetails_MultiplePasses (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 11 bytes in 1 blocks are definitely lost in loss record 26 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x40410D: TestCuSuiteDetails_MultipleFails (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 11 bytes in 1 blocks are definitely lost in loss record 27 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x40412D: TestCuSuiteDetails_MultipleFails (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 12 bytes in 1 blocks are definitely lost in loss record 28 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4043C2: TestCuStrCopy (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 20 bytes in 1 blocks are definitely lost in loss record 32 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x401426: CuStrCopy (in /app/tests.ex)
+==1==    by 0x4018EC: CuTestInit (in /app/tests.ex)
+==1==    by 0x401973: CuTestNew (in /app/tests.ex)
+==1==    by 0x404F3A: TestAssertDblEquals (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 47 (40 direct, 7 indirect) bytes in 1 blocks are definitely lost in loss record 40 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40195E: CuTestNew (in /app/tests.ex)
+==1==    by 0x402A47: TestCuTestNew (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 65 (40 direct, 25 indirect) bytes in 1 blocks are definitely lost in loss record 41 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40195E: CuTestNew (in /app/tests.ex)
+==1==    by 0x4047EA: TestAssertStrEquals_NULL (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 53 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401B81: CuAssert_Line (in /app/tests.ex)
+==1==    by 0x402DF1: TestCuAssert (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 54 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401B81: CuAssert_Line (in /app/tests.ex)
+==1==    by 0x402EEA: TestCuAssert (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 55 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401E35: CuAssertPtrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x40322C: TestCuAssertPtrEquals_Failure (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 56 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401B81: CuAssert_Line (in /app/tests.ex)
+==1==    by 0x4033C0: TestCuAssertPtrNotNull_Failure (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 57 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401B81: CuAssert_Line (in /app/tests.ex)
+==1==    by 0x402A10: zTestFails (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x403454: TestCuTestRun (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 58 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x403AE9: TestCuSuiteSummary (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 59 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401B81: CuAssert_Line (in /app/tests.ex)
+==1==    by 0x402A10: zTestFails (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x403B1B: TestCuSuiteSummary (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 60 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x403C39: TestCuSuiteDetails_SingleFail (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 61 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401B81: CuAssert_Line (in /app/tests.ex)
+==1==    by 0x402A10: zTestFails (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x403C6B: TestCuSuiteDetails_SingleFail (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 62 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x403E89: TestCuSuiteDetails_SinglePass (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 63 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x403FD9: TestCuSuiteDetails_MultiplePasses (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 64 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x404139: TestCuSuiteDetails_MultipleFails (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 65 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401BFE: CuAssertStrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x404699: TestAssertStrEquals (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 66 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401BFE: CuAssertStrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x404A3D: TestAssertStrEquals_FailNULLStr (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 67 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401BFE: CuAssertStrEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x404C0D: TestAssertStrEquals_FailStrNULL (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 68 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401D11: CuAssertIntEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x404DD1: TestAssertIntEquals (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 256 bytes in 1 blocks are definitely lost in loss record 69 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401DB5: CuAssertDblEquals_LineMsg (in /app/tests.ex)
+==1==    by 0x40517C: TestAssertDblEquals (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 272 (16 direct, 256 indirect) bytes in 1 blocks are definitely lost in loss record 70 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4014B3: CuStringNew (in /app/tests.ex)
+==1==    by 0x4022E0: TestCuStringNew (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 272 (16 direct, 256 indirect) bytes in 1 blocks are definitely lost in loss record 71 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4014B3: CuStringNew (in /app/tests.ex)
+==1==    by 0x4023A0: TestCuStringAppend (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 272 (16 direct, 256 indirect) bytes in 1 blocks are definitely lost in loss record 72 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4014B3: CuStringNew (in /app/tests.ex)
+==1==    by 0x4024A0: TestCuStringAppendNULL (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 272 (16 direct, 256 indirect) bytes in 1 blocks are definitely lost in loss record 73 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4014B3: CuStringNew (in /app/tests.ex)
+==1==    by 0x402520: TestCuStringAppendChar (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 272 (16 direct, 256 indirect) bytes in 1 blocks are definitely lost in loss record 74 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4014B3: CuStringNew (in /app/tests.ex)
+==1==    by 0x4025D0: TestCuStringInserts (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 301 bytes in 1 blocks are definitely lost in loss record 75 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4013EA: CuStrAlloc (in /app/tests.ex)
+==1==    by 0x404447: TestCuStringAppendFormat (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 306 (40 direct, 266 indirect) bytes in 1 blocks are definitely lost in loss record 76 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40195E: CuTestNew (in /app/tests.ex)
+==1==    by 0x404554: TestFail (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 316 (40 direct, 276 indirect) bytes in 1 blocks are definitely lost in loss record 77 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40195E: CuTestNew (in /app/tests.ex)
+==1==    by 0x40461A: TestAssertStrEquals (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 316 (40 direct, 276 indirect) bytes in 1 blocks are definitely lost in loss record 78 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40195E: CuTestNew (in /app/tests.ex)
+==1==    by 0x404D5A: TestAssertIntEquals (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 316 (40 direct, 276 indirect) bytes in 1 blocks are definitely lost in loss record 79 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40195E: CuTestNew (in /app/tests.ex)
+==1==    by 0x404F3A: TestAssertDblEquals (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 328 (40 direct, 288 indirect) bytes in 1 blocks are definitely lost in loss record 80 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40195E: CuTestNew (in /app/tests.ex)
+==1==    by 0x4049BA: TestAssertStrEquals_FailNULLStr (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 328 (40 direct, 288 indirect) bytes in 1 blocks are definitely lost in loss record 81 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x40195E: CuTestNew (in /app/tests.ex)
+==1==    by 0x404B8A: TestAssertStrEquals_FailStrNULL (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 512 bytes in 2 blocks are definitely lost in loss record 82 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401B81: CuAssert_Line (in /app/tests.ex)
+==1==    by 0x402A10: zTestFails (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x4039FA: TestCuSuiteRun (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 512 bytes in 2 blocks are definitely lost in loss record 83 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401481: CuStringInit (in /app/tests.ex)
+==1==    by 0x401A46: CuFail_Line (in /app/tests.ex)
+==1==    by 0x401B81: CuAssert_Line (in /app/tests.ex)
+==1==    by 0x402A10: zTestFails (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x40416B: TestCuSuiteDetails_MultipleFails (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 573 (16 direct, 557 indirect) bytes in 1 blocks are definitely lost in loss record 85 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4014B3: CuStringNew (in /app/tests.ex)
+==1==    by 0x404450: TestCuStringAppendFormat (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 785 (16 direct, 769 indirect) bytes in 1 blocks are definitely lost in loss record 87 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x4014B3: CuStringNew (in /app/tests.ex)
+==1==    by 0x4027B0: TestCuStringResizes (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 8,208 bytes in 1 blocks are definitely lost in loss record 88 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401E93: CuSuiteNew (in /app/tests.ex)
+==1==    by 0x4035A0: TestCuSuiteNew (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 8,208 bytes in 1 blocks are definitely lost in loss record 89 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401E93: CuSuiteNew (in /app/tests.ex)
+==1==    by 0x403709: TestCuSuiteAddSuite (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== 8,412 (8,208 direct, 204 indirect) bytes in 1 blocks are definitely lost in loss record 90 of 90
+==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1==    by 0x401E93: CuSuiteNew (in /app/tests.ex)
+==1==    by 0x403700: TestCuSuiteAddSuite (in /app/tests.ex)
+==1==    by 0x401A07: CuTestRun (in /app/tests.ex)
+==1==    by 0x40203B: CuSuiteRun (in /app/tests.ex)
+==1==    by 0x401362: RunAllTests (in /app/tests.ex)
+==1==    by 0x4013C8: main (in /app/tests.ex)
+==1== 
+==1== LEAK SUMMARY:
+==1==    definitely lost: 30,960 bytes in 63 blocks
+==1==    indirectly lost: 4,512 bytes in 29 blocks
+==1==      possibly lost: 0 bytes in 0 blocks
+==1==    still reachable: 0 bytes in 0 blocks
+==1==         suppressed: 0 bytes in 0 blocks
+==1== 
+==1== For counts of detected and suppressed errors, rerun with: -v
+==1== ERROR SUMMARY: 75 errors from 74 contexts (suppressed: 0 from 0)
