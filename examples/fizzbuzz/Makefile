@@ -9,5 +9,5 @@ execute:
 
 .PHONY: valgrind
 valgrind:
-	docker run -it -v ${PWD}:/app valgrind valgrind --leak-check=yes ./tests.ex
+	docker run -it -v ${PWD}:/app valgrind valgrind --leak-check=yes -v --track-origins=yes ./tests.ex
 
