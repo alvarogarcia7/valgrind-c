@@ -7,7 +7,7 @@
 
 char* FizzBuzz(int number)
 {
-    char* buffer = calloc(4, sizeof(char));
+    char* buffer = calloc(5, sizeof(char));
 
     if(number % 5 == 0)
     {
