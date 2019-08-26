@@ -63,6 +63,9 @@ void TestCuStringAppend(CuTest* tc)
 	CuStringAppend(str, " world");
 	CuAssertIntEquals(tc, 11, str->length);
 	CuAssertStrEquals(tc, "hello world", str->buffer);
+
+	free(str->buffer);
+	free(str);
 }
 
 
@@ -72,6 +75,9 @@ void TestCuStringAppendNULL(CuTest* tc)
 	CuStringAppend(str, NULL);
 	CuAssertIntEquals(tc, 4, str->length);
 	CuAssertStrEquals(tc, "NULL", str->buffer);
+
+	free(str->buffer);
+	free(str);
 }
 
 
@@ -84,6 +90,9 @@ void TestCuStringAppendChar(CuTest* tc)
 	CuStringAppendChar(str, 'd');
 	CuAssertIntEquals(tc, 4, str->length);
 	CuAssertStrEquals(tc, "abcd", str->buffer);
+
+	free(str->buffer);
+	free(str);
 }
 
 
@@ -102,6 +111,9 @@ void TestCuStringInserts(CuTest* tc)
 	CuStringInsert(str, "!", 11);
 	CuAssertIntEquals(tc, 12, str->length);
 	CuAssertStrEquals(tc, "hello world!", str->buffer);
+
+	free(str->buffer);
+	free(str);
 }
 
 
@@ -115,6 +127,9 @@ void TestCuStringResizes(CuTest* tc)
 	}
 	CuAssertTrue(tc, STRING_MAX * 2 == str->length);
 	CuAssertTrue(tc, STRING_MAX * 2 <= str->size);
+
+	free(str->buffer);
+	free(str);
 }
 
 CuSuite* CuStringGetSuite(void)
