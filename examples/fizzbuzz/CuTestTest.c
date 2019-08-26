@@ -48,6 +48,9 @@ void TestCuStringNew(CuTest* tc)
 	CuAssertTrue(tc, 0 == str->length);
 	CuAssertTrue(tc, 0 != str->size);
 	CuAssertStrEquals(tc, "", str->buffer);
+
+	free(str->buffer);
+	free(str);
 }
 
 
