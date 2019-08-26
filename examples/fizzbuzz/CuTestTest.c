@@ -488,6 +488,7 @@ void TestCuStrCopy(CuTest* tc)
 	const char* old = "hello world";
 	const char* newStr = CuStrCopy(old);
 	CuAssert(tc, "old is new", strcmp(old, newStr) == 0);
+	free((void*)newStr);
 }
 
 
@@ -504,6 +505,9 @@ void TestCuStringAppendFormat(CuTest* tc)
 	/* buffer limit raised to HUGE_STRING_LEN so no overflow */
 
 	CuAssert(tc, "length of str->buffer is 300", 300 == strlen(str->buffer));
+
+	free(text);
+	free(str);
 }
 
 void TestFail(CuTest* tc)
