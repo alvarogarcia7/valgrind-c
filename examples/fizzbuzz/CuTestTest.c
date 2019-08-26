@@ -152,6 +152,8 @@ void TestCuTestNew(CuTest* tc)
 	CuAssertTrue(tc, tc2->function == TestPasses);
 	CuAssertTrue(tc, tc2->ran == 0);
 	CuAssertTrue(tc, tc2->jumpBuf == NULL);
+
+	free(tc2);
 }
 
 
@@ -565,6 +567,8 @@ void TestAssertStrEquals_NULL(CuTest* tc)
 	}
 	CuAssertTrue(tc, !tc2->failed);
 	CompareAsserts(tc, "CuAssertStrEquals_NULL failed", NULL, tc2->message);
+
+	free(tc2);
 }
 
 void TestAssertStrEquals_FailNULLStr(CuTest* tc)
