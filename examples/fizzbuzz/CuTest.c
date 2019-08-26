@@ -111,7 +111,7 @@ void CuStringInsert(CuString* str, const char* text, int pos)
 
 void CuTestInit(CuTest* t, const char* name, TestFunction function)
 {
-	t->name = CuStrCopy(name);
+	t->name = name;
 	t->failed = 0;
 	t->ran = 0;
 	t->message = NULL;
@@ -129,7 +129,6 @@ CuTest* CuTestNew(const char* name, TestFunction function)
 void CuTestDelete(CuTest *t)
 {
         if (!t) return;
-        free(t->name);
         free(t);
 }
 

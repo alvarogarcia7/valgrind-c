@@ -42,7 +42,7 @@ typedef void (*TestFunction)(CuTest *);
 
 struct CuTest
 {
-	char* name;
+	const char* name;
 	TestFunction function;
 	int failed;
 	int ran;
