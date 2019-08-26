@@ -496,6 +496,8 @@ void TestCuSuiteDetails_MultipleFails(CuTest* tc)
 	CuAssert(tc, "Couldn't find middle", strstr(details.buffer, mid) != NULL);
 	details.buffer[strlen(front)] = 0;
 	CuAssertStrEquals(tc, front, details.buffer);
+
+	free(details.buffer);
 }
 
 
