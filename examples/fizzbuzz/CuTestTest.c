@@ -236,6 +236,7 @@ void TestCuAssertPtrEquals_Failure(CuTest* tc)
 	CuAssertPtrEquals(&tc2, NULL, &x);
 	CuAssertTrue(tc, tc2.failed);
 	CompareAsserts(tc, "CuAssertPtrEquals failed", expected_message, tc2.message);
+	free((void*)tc2.message);
 }
 
 void TestCuAssertPtrNotNull_Success(CuTest* tc)
@@ -261,6 +262,7 @@ void TestCuAssertPtrNotNull_Failure(CuTest* tc)
 	CuAssertPtrNotNull(&tc2, NULL);
 	CuAssertTrue(tc, tc2.failed);
 	CompareAsserts(tc, "CuAssertPtrNotNull failed", "null pointer unexpected", tc2.message);
+	free((void*)tc2.message);
 }
 
 void TestCuTestRun(CuTest* tc)
@@ -273,6 +275,7 @@ void TestCuTestRun(CuTest* tc)
 	CuAssertTrue(tc, tc2.failed);
 	CuAssertTrue(tc, tc2.ran);
 	CompareAsserts(tc, "TestRun failed", "test should fail", tc2.message);
+	free((void*)tc2.message);
 }
 
 /*-------------------------------------------------------------------------*
