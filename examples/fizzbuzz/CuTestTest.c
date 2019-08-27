@@ -49,8 +49,7 @@ void TestCuStringNew(CuTest* tc)
 	CuAssertTrue(tc, 0 != str->size);
 	CuAssertStrEquals(tc, "", str->buffer);
 
-	free(str->buffer);
-	free(str);
+	CuStringDelete(str);
 }
 
 
@@ -76,8 +75,7 @@ void TestCuStringAppendNULL(CuTest* tc)
 	CuAssertIntEquals(tc, 4, str->length);
 	CuAssertStrEquals(tc, "NULL", str->buffer);
 
-	free(str->buffer);
-	free(str);
+	CuStringDelete(str);
 }
 
 
@@ -203,11 +201,12 @@ void TestCuAssert(CuTest* tc)
 	CuAssert(&tc2, "test 3", 1);
 	CuAssertTrue(tc, tc2.failed);
 	CompareAsserts(tc, "CuAssert didn't fail", "test 2", tc2.message);
+	free((void*)tc2.message);
 
 	CuAssert(&tc2, "test 4", 0);
 	CuAssertTrue(tc, tc2.failed);
 	CompareAsserts(tc, "CuAssert didn't fail", "test 4", tc2.message);
-
+	free((void*)tc2.message);
 }
 
 void TestCuAssertPtrEquals_Success(CuTest* tc)
